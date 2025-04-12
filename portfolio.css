@@ -24,7 +24,7 @@ body {
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 35px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -134,7 +134,7 @@ body {
     font-weight: 600;
     opacity: 0;
     animation: slideRight .5s ease forwards;
-    animation-delay: 2s;
+    animation-delay: 1.5s;
 
 }
 
@@ -238,7 +238,7 @@ section{
 .container1{
     width: 500px;
     height: 500px;
-    padding: 75px 90px;
+    padding: 120px 130px;
     margin-left: 120px;    
 }
 .heading1{
@@ -564,4 +564,88 @@ section{
     color: #0ef !important;
 }
 
-
+.card-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between cards */
+    perspective: 1000px;
+    background-color: #0a0a0a; /* Optional dark background for glow contrast */
+  }
+  
+  .card {
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    aspect-ratio: 3 / 4; /* Keeps height proportional (like 300x400) */
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-container:hover .card:not(:hover) .card-inner {
+    transform: rotateY(0deg);
+  }
+  
+  /* Shared front/back card styling */
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    overflow: hidden;
+    /* Vibrant color glow from all sides */
+    box-shadow: 0 0 25px 10px #00aaff;
+  }
+  
+  /* Card front image styling */
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  /* Flip to back */
+  .card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    background-color: #081b29;
+    color: #ffffff;
+  }
+  
+  /* Optional: Different color glows per card */
+  .card:nth-child(1) .card-front,
+  .card:nth-child(1) .card-back {
+    box-shadow: 0 0 25px 10px #00aaff; /* Blue */
+  }
+  
+  .card:nth-child(2) .card-front,
+  .card:nth-child(2) .card-back {
+    box-shadow: 0 0 25px 10px #ff6a00; /* Orange */
+  }
+  
+  .card:nth-child(3) .card-front,
+  .card:nth-child(3) .card-back {
+    box-shadow: 0 0 25px 10px #00ff95; /* Green */
+  }
+  
