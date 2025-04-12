@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0a0a0a;
+    }
+
+    .card-container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      perspective: 1000px;
+    }
+
+    .card {
+      max-width: 400px;
+      width: 100%;
+      position: relative;
+      aspect-ratio: 3 / 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-container:hover .card:not(:hover) .card-inner {
+      transform: rotateY(0deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 25px 10px #00aaff;
+    }
+
+    .card:nth-child(2) .card-front,
+    .card:nth-child(2) .card-back {
+      box-shadow: 0 0 25px 10px #ff6a00;
+    }
+
+    .card:nth-child(3) .card-front,
+    .card:nth-child(3) .card-back {
+      box-shadow: 0 0 25px 10px #00ff95;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Ensure the anchor tag takes the full space */
+    .card-front a {
+      display: block;
+    }
+
+    /* Styling for the button */
+    .btn-box {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #00aaff;
+      color: #fff;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-box:hover {
+      background-color: #007f8c;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skill.html">Skill</a>
+      <a href="project.html">Project</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="card-container">
+
+    <!-- Card 1 -->
+    <div class="card">
+      <h1 style="text-align: center; color: white; margin-bottom: 10px;">My Portfolio</h1>
+      <div class="card-inner">
+        <div class="card-front">
+            <img src="myportfolioposter.jpg" alt="Portfolio Front" />
+        </div>
+        <div class="card-back" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 30px; height: 100%; background-color: #081b29;">
+          <h2 style="font-size: 2em; margin-bottom: 20px; font-weight: 600; color: #ffffff;">My Professional Portfolio</h2>
+          <ul style="list-style-position: inside; padding: 0; margin: 0; font-size: 1.1em; line-height: 1.6; max-width: 600px; color: #ffffff;">
+            <li>Responsive Portfolio Website</li>
+            <li>Showcases projects, skills, and achievements.</li>
+            <li>Focused on UI/UX for seamless navigation.</li>
+            <li>Highlights expertise in branding, digital experiences, and illustration.</li>
+            <li>Blends aesthetics with functionality for user-centric designs.</li>
+            <li>Invites collaboration on creative projects.</li>
+          </ul>
+          <!-- Button Link -->
+          <a href="https://omg0014.github.io/My-Portfolio/" target="_blank" class="btn-box">Visit Portfolio</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <h1 style="text-align: center; color: white; margin-bottom: 10px;">AI Trend Blogs</h1>
+      <div class="card-inner">
+        <div class="card-front">
+            <img src="aitrendblogsposter.jpg" alt="AI Blog Front" />
+        </div>
+        <div class="card-back" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 30px; height: 100%; background-color: #081b29;">
+          <h2 style="font-size: 2em; margin-bottom: 20px; font-weight: 600; color: #ffffff;">AI Trends Blog</h2>
+          <ul style="list-style-position: inside; padding: 0; margin: 0; font-size: 1.1em; line-height: 1.6; max-width: 600px; color: #ffffff;">
+            <li>AI Trends Website</li>
+            <li>Designed and developed a site focused on AI advancements.</li>
+            <li>Intuitive UI for seamless navigation and engagement.</li>
+            <li>Optimized for performance, accessibility, and responsiveness.</li>
+            <li>Integrated content management for AI articles.</li>
+            <li>Deployed and maintained with up-to-date AI insights.</li>
+          </ul>
+          <!-- Button Link -->
+          <a href="https://nssgourav.github.io/Sem1-Project/" target="_blank" class="btn-box">Visit AI Blog</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <h1 style="text-align: center; color: white; margin-bottom: 10px;">Coding Scrambler</h1>
+      <div class="card-inner">
+        <div class="card-front">
+            <img src="quizgameposter.jpg" alt="Game Front" />
+        </div>
+        <div class="card-back" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 30px; height: 100%; background-color: #081b29;">
+          <h2 style="font-size: 2em; margin-bottom: 20px; font-weight: 600; color: #ffffff;">Coding Scramble Game</h2>
+          <ul style="list-style-position: inside; padding: 0; margin: 0; font-size: 1.1em; line-height: 1.6; max-width: 600px; color: #ffffff;">
+            <li>Word Scramble Game</li>
+            <li>Developed using HTML, CSS, and JavaScript.</li>
+            <li>Dynamic Levels: Progress through levels with correct answers.</li>
+            <li>Randomized Questions: Shuffled programming-related content for replayability.</li>
+            <li>Input Validation: Instant feedback on answers.</li>
+            <li>Responsive UI: Mobile-friendly, visually appealing design.</li>
+          </ul>
+          <!-- Button Link -->
+          <a href="https://omg0014.github.io/coding-Scramble-Game/" target="_blank" class="btn-box">Play Coding Scrambler</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
