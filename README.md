@@ -53,7 +53,7 @@ Interactive **daily planner** with task management and scheduling features.
 A website showcasing the **latest advancements in AI**.  
 - Features: Content management, responsive UI, performance and accessibility optimized.  
 - Technologies: HTML, CSS, JavaScript, CMS integration.  
-- Live Demo: [https://omg0014.github.io/FlavorFiesta-/](https://omg0014.github.io/FlavorFiesta-/)
+- Live Demo: [https://omg0014.github.io/FlavorFiesta-/](https://sem1-project-fawn.vercel.app)
 
 ---
 
